@@ -12,13 +12,14 @@ const LikedCats = () => {
   const [cats, setCats] = useState([]);
 
   const [fetchCats, isLoading, error] = useFetching(async () => {
-    if (!cookies.liked) return;
-    let cats = [];
-    for (const id of cookies.liked) {
-      const response = await CatService.getCat(id);
-      cats.push(response.data);
+    if (cookies.liked) {
+      let cats = [];
+      for (const id of cookies.liked) {
+        const response = await CatService.getCat(id);
+        cats.push(response.data);
+      }
+      setCats(cats);
     }
-    setCats(cats);
   });
 
   useEffect(() => {

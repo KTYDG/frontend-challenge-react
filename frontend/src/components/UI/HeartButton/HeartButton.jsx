@@ -6,7 +6,7 @@ import { ReactComponent as Hover } from "../../../img/hover.svg";
 import { useCookies } from "react-cookie";
 
 const HeartButton = ({ id, clicked, setClicked }) => {
-  const [cookies, setCookie] = useCookies(["liked"]);
+  const [cookies, setCookie] = useCookies();
   const [hover, setHover] = useState(false);
   const handleMouseEnter = () => {
     setHover(true);
@@ -16,18 +16,17 @@ const HeartButton = ({ id, clicked, setClicked }) => {
   };
 
   const liked = () => {
-    setClicked(!clicked);
     if (clicked) {
-      if (cookies.liked)
-        setCookie("liked", [...cookies.liked, id]);
-      else setCookie("liked", [id]);
-    } else {
       if (cookies.liked)
         setCookie(
           "liked",
           cookies.liked.filter((elem) => elem !== id)
         );
+    } else {
+      if (cookies.liked) setCookie("liked", [...cookies.liked, id]);
+      else setCookie("liked", [id]);
     }
+    setClicked(!clicked);
   };
 
   return (

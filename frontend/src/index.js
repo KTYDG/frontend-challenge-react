@@ -5,9 +5,9 @@ import App from "./App";
 
 const root = ReactDOM.createRoot(document.getElementById("appRoot"));
 root.render(
-  <React.StrictMode>
-    <CookiesProvider defaultSetOptions={{ path: "/", sameSite: "lax" }}>
-      <App />
-    </CookiesProvider>
-  </React.StrictMode>
+  // <React.StrictMode>
+  <CookiesProvider defaultSetOptions={{ path: "/", sameSite: "strict" }}>
+    <App />
+  </CookiesProvider>
+  // </React.StrictMode>
 );
