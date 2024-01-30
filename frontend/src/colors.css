@@ -1,0 +1,9 @@
+:root {
+  --background: white;
+  --prim-col: #2196F3;
+  --prim-act-col: #1E88E5;
+  --text-col: rgba(255, 255, 255, 0.7);
+  --text-act-col: white;
+  --heart: #F24E1E;
+  --heart-act: #FF3A00;
+}

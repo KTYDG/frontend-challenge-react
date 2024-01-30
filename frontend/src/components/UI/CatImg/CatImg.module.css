@@ -1,0 +1,24 @@
+.cont {
+  width: 256px;
+  height: 256px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 225px;
+  height: 225px;
+  object-fit: cover;
+  transition:
+    width 0.3s ease,
+    height 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.cont:hover img {
+  width: 256px;
+  height: 256px;
+  box-shadow: -1px 9px 4px -2px rgba(0, 0, 0, 0.4);
+}
