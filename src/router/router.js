@@ -6,5 +6,5 @@ export const routes = [
   { path: "/frontend-challenge-react/cats", element: <Cats /> },
   { path: "/frontend-challenge-react/liked", element: <LikedCats /> },
 
-  { path: "*", element: <Navigate to={"/cats"} /> },
+  // { path: "*", element: <Navigate to={"/frontend-challenge-react/cats"} /> },
 ];
