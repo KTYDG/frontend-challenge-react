@@ -3,8 +3,8 @@ import Cats from "../pages/Cats";
 import LikedCats from "../pages/LikedCats";
 
 export const routes = [
-  { path: "/cats", element: <Cats /> },
-  { path: "/liked", element: <LikedCats /> },
+  { path: "/frontend-challenge-react/cats", element: <Cats /> },
+  { path: "/frontend-challenge-react/liked", element: <LikedCats /> },
 
   { path: "*", element: <Navigate to={"/cats"} /> },
 ];
