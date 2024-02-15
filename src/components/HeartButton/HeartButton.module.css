@@ -1,0 +1,21 @@
+@import url("../../colors.css");
+
+.button {
+  height: 48px;
+  width: 48px;
+  border: none;
+  background-color: transparent;
+  color: transparent;
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.img {
+  max-height: 48px;
+  max-width: 48px;
+}

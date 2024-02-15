@@ -1,0 +1,5 @@
+.window {
+  height: 100%;
+  width: calc(100% - 96px);
+  padding: 112px 48px;
+}
